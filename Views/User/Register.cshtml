@@ -1,0 +1,44 @@
+﻿@model RegisterViewModel
+
+<div class="row">
+    <div class="col-12">
+        <div class="bg-white p-4">
+            <h3 class="text-primary">YENİ KULLANICI KAYIT FORMU</h3>
+            <form action="Register" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mb-3">
+                    <label asp-for="UserName" class="form-label text-primary">Ad</label>
+                    <input asp-for="UserName" class="form-control" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="UserSurname" class="form-label text-primary">Soyad</label>
+                    <input asp-for="UserSurname" class="form-control" />
+                    <span asp-validation-for="UserSurname" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Nickname" class="form-label text-primary">Kullanıcı Adı</label>
+                    <input asp-for="Nickname" class="form-control" />
+                    <span asp-validation-for="Nickname" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label text-primary">E-posta</label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label text-primary">Parola</label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="PasswordConf" class="form-label text-primary">Parola Tekrar</label>
+                    <input asp-for="PasswordConf" class="form-control" />
+                    <span asp-validation-for="PasswordConf" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+            </form>
+        </div>
+
+    </div>
+</div>

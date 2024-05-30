@@ -1,0 +1,17 @@
+﻿@model List<Post>
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title">Son Eklenen İçerikler</h5>
+    </div>
+    <div class="card-body">
+        @foreach(var item in Model)
+        {
+            <div class="mb-3">
+                <a href="#">
+                    <h6 class="mb-0">@item.Title</h6>
+                </a>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,42 @@
+﻿@model PostViewModel
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="bg-white p-4">
+                <h1 class="h4 mb-4">Öne Çıkanlar</h1>
+            @foreach(var item in Model.Posts)
+            {
+                <div class="card bg-transparent border-0 mb-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="~/img/@item.PostImage" class="img-fluid rounded" alt=""/>
+                        </div>
+                        <div class="col-8">
+                            <h5><a href="/posts/details/@item.PostUrl" class="btn-link fw-bold text-black">@item.Title</a></h5>
+                            <p>@item.Content</p>
+                            <a href="/posts/details/@item.PostUrl" class="badge bg-danger bg-opacity-10 text-danger mb-2 fw-bold">Coding</a>
+                            <p>@item.Description</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-3"/>
+            }
+            <nav>
+                <ul class="pagination">
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>                                         
+                </ul>
+            </nav>
+        </div>
+
+        </div>
+        <div class="col-lg-4">
+            <vc:tag-menu></vc:tag-menu>
+            <br />
+            <vc:new-post></vc:new-post>
+        </div>
+                      
+    </div>
+    
+

@@ -1,0 +1,44 @@
+﻿@model CreatePostViewModel
+
+<div class="row">
+    <div class="col-12">
+        <div class="bg-white p-4">
+            <h3 class="text-primary">İÇERİK OLUŞTUR</h3>
+            <form action="CreatePost" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label text-primary"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label text-primary"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="PostUrl" class="form-label text-primary"></label>
+                    <input asp-for="PostUrl" class="form-control" />
+                    <span asp-validation-for="PostUrl" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Content" class="form-label text-primary"></label>
+                    <textarea asp-for="Content" class="form-control"></textarea>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-success">PAYLAŞ</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/7.1.1/tinymce.min.js" integrity="sha512-bAtLCmEwg+N9nr6iVELr/SlDxBlyoF0iVdPxAvcOCfUiyi6RcuS6Lzawi78iPbAfbNyIUftvwK9HPWd+3p975Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        tinymce.init({
+            selector:'#Content'
+        });
+    </script>
+}
+
+
